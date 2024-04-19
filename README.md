@@ -32,3 +32,19 @@ i changed the height to 800 and width to 3280 and then flipped the image vertica
 tis gav eme the second flag 
 flag{G00d_Boy_good_girL}
 
+now for the third winrar we use cmdline to see what was happeneing 
+![Screenshot from 2024-04-19 18-55-49](https://github.com/adwait3/memlabs/assets/148553626/cac936f7-797b-4a17-8323-90aec2590eae)
+we find this very importnat file now we use filescan to get to that file 
+![Screenshot from 2024-04-19 19-05-47](https://github.com/adwait3/memlabs/assets/148553626/53e7eec3-7e41-4104-a64d-ff7bb9a4826b)
+we use dumpfiles to get the file and now get a file named file.None.0xfffffa8001034450.dat we change it to important.rar
+now we unrar it 
+![Screenshot from 2024-04-19 19-15-57](https://github.com/adwait3/memlabs/assets/148553626/cd39b0f9-6cd9-44b3-b106-aa559437ecc7)
+but we see that this file is password protected 
+to get the password we use hashdump
+![Screenshot from 2024-04-19 19-20-15](https://github.com/adwait3/memlabs/assets/148553626/beb1f6b9-6969-4bc8-af52-a52ba6be149c)
+we see the alisa simpson hash and get it
+f4ff64c8baac57d22f22edc681055ba6
+convert to upper case and get the flag
+![Screenshot from 2024-04-19 19-28-21](https://github.com/adwait3/memlabs/assets/148553626/68da182f-e412-4423-803d-57f315aabb90)
+and we get the third flag
+flag{w3ll_3rd_stage_was_easy}
