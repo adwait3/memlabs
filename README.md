@@ -46,5 +46,6 @@ we see the alisa simpson hash and get it
 f4ff64c8baac57d22f22edc681055ba6
 convert to upper case and get the flag
 ![Screenshot from 2024-04-19 19-28-21](https://github.com/adwait3/memlabs/assets/148553626/68da182f-e412-4423-803d-57f315aabb90)
+
 and we get the third flag
 flag{w3ll_3rd_stage_was_easy}
