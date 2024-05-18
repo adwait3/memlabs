@@ -83,4 +83,38 @@ copying the password gives the second flag
 >flag{w0w_th1s_1s_Th3_SeC0nD_ST4g3_!!}
 
 ## part 3
+for this part we concentrate on chrome and history 
 
+ so we use file scan to get the data 
+
+ ```
+ python3 vol.py -f MemoryDump_Lab2.raw -profile=Win7SP1x64 filescan | grep "chrome" -i| grep "history" -i
+```
+
+now we dump the file using 
+```
+python3 vol.py -f MemoryDump_Lab2.raw -profile=Win7SP1x64 -o '/home/kali/Desktop'   windows.dumpfiles  --physaddr 0x3fcfb1d0
+
+```
+
+we get a sql lite file from the hitsory now we look at the urls and get 
+
+![ur;](https://github.com/adwait3/memlabs/assets/148553626/d70a07c1-fbb1-44ac-844e-a4225e8dd3af)
+
+after going through these we get a mega link 
+
+'https://mega.nz/#F!TrgSQQTS!H0ZrUzF0B-ZKNM3y9E76lg'
+
+here we get a zip file important.zip while trying to unzip we see its password protected 
+
+![unzip](https://github.com/adwait3/memlabs/assets/148553626/a2d46727-e7c6-4381-b212-4d73c4a32e34)
+
+after using cyberchef for sha1 we get 
+
+password
+>6045dd90029719a039fd2d2ebcca718439dd100a
+
+which gives us the third flag
+![flag](https://github.com/adwait3/memlabs/assets/148553626/699fb548-8f43-4a39-af52-3cfb412c3719)
+
+flag{oK_So_Now_St4g3_3_is_DoNE!!}
