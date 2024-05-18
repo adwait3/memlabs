@@ -19,20 +19,28 @@ after this your volatilty 3 setup is complete and you can start using the plugin
 ## First part
 
 ``python3 vol.py -h``
-use this to see the different plugins and their uses
-first i used 
+use this to see the different plugins and their uses.
+first i used
+
 ``python3 vol.py -f '/home/kali/Desktop/MemoryDump_Lab2.raw' windows.info``
 to view the info and found it was windows 7 machine
 
+
 ![Screenshot 2024-03-18 100617](https://github.com/adwait3/memlabs/assets/148553626/c41159bb-0975-4f90-98ba-7a03f9237a06)
-after this i used 
+after this i used
+
 ``python3 vol.py -f MemoryDump_Lab2.raw windows.pslist.PsList``
+
 to see the processes
 ![pslist](https://github.com/adwait3/memlabs/assets/148553626/82052238-034f-46be-9c13-f8d41f964f0a)
+
 afer this i used 
+
 ``python3 vol.py -f MemoryDump_Lab2.raw windows.envars``
+
 to see the environment variables
 ![variablespng](https://github.com/adwait3/memlabs/assets/148553626/0905da9f-478f-49c3-8d8d-79ca8beef071)
+
 and found temp c variable with some fishy looking stuff (``ZmxhZ3t3M2xjMG0zX1QwXyRUNGczXyFfT2ZfTDRCXzJ9``) put it on cyber chef to get the first flag
 
 ``flag{w3lc0m3_T0_$T4g3_!_Of_L4B_2}``
