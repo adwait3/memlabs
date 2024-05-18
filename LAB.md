@@ -1,13 +1,13 @@
 ## LAB 2
 # installing volatility3
 for this level i decided to use volatility 3 on my kali vm , Installing volatility three was not as straightforward as expected i folllowe dthe followng steps 
-'git clone https://github.com/volatilityfoundation/volatility3.git'
+>git clone https://github.com/volatilityfoundation/volatility3.git
 then cd to the directory
-'cd volatility3'
-'sudo python setup.py install'
-'python3 vol.py --h'
-'/usr/bin/python3 -m pip install --upgrade pip'
-'pip3 install -r requirements.txt'
+>cd volatility3
+sudo python setup.py install
+python3 vol.py --h
+/usr/bin/python3 -m pip install --upgrade pip
+pip3 install -r requirements.txt
 after this your volatilty 3 setup is complete and you can start using the plugins for solving the level
 
 ## First part
