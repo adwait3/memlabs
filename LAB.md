@@ -19,10 +19,12 @@ after this your volatilty 3 setup is complete and you can start using the plugin
 ## First part
 
 ``python3 vol.py -h``
+
 use this to see the different plugins and their uses.
 first i used
 
 ``python3 vol.py -f '/home/kali/Desktop/MemoryDump_Lab2.raw' windows.info``
+
 to view the info and found it was windows 7 machine
 
 
