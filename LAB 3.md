@@ -1,5 +1,5 @@
 # LAB 3
-## part ono
+## part one
 first we chcek the active processses using 
 
 ```
@@ -72,4 +72,36 @@ atfer this we get first half of the flag which is
 
 ## part 2
 
-for the second part of the flag
+
+for the second part of the flag we are given a hint to use steghide so we can assume that there must be a image or audio file so i serach for images and find a .jpeg file using.
+```
+python3 vol.py -f '/home/kali/Desktop/MemoryDump_Lab3.raw' windows.filescan | grep ".jpeg" 
+```
+
+now i dump this file using
+
+```
+python3 vol.py -f '/home/kali/Desktop/MemoryDump_Lab3.raw' -o "/home/kali/Desktop" windows.dumpfiles --physaddr 0x4f34148 
+
+```
+![jpeg](https://github.com/adwait3/memlabs/assets/148553626/b8521a69-c6c4-4b98-b1d9-e94a90f87bc5)
+
+
+this is the image we get 
+![img](https://github.com/adwait3/memlabs/assets/148553626/11fd1875-4215-4dce-879c-2d1dc2ad710a)
+
+now I use Steghide on this image and i am prompted for a password after trying out a blank password I'm not prompted anything so i use the fist half of the flag and it works 
+```
+steghide extract -sf suspision1.jpeg -p "inctf{0n3_h4lf"
+```
+
+![text](https://github.com/adwait3/memlabs/assets/148553626/665799b3-13f7-422d-a8d5-96e711a14f8b)
+
+and hence we get the flag
+
+'_1s_n0t_3n0ugh}'
+
+# flag
+"inctf{0n3_h4lf_1s_n0t_3n0ugh}"
+
+
